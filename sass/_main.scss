@@ -2,7 +2,13 @@
 %site{
 	width: 1536px;
 	margin: 0 auto;
+	@include respond-to(step1){
+		width: auto;
+	}
 }
+// *{
+// 	border: 1px solid red;
+// }
 .btn{
 	display: inline-block;
 	background-color: #157dfb;
@@ -18,6 +24,11 @@
 	padding: 21px 0;
 	width: 100%;
 	@include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+	@include respond-to(step1){
+		padding: 10px 0;
+		font-size: 24px;
+		@include border-radius(10px);
+	}
 	&:hover,
 	&:focus{
 		background-image: none;
@@ -36,14 +47,33 @@
 			);
 	}
 }
+.btn_mod{
+	@include respond-to(step1){
+		width: 70%;
+		display: block;
+		margin: 0 auto;
+		padding: 8px 0;
+		font-size: 24px;
+	}
+}
 //header
 .header{
 	background: url('../img/back-big.png');
+	@include background-size(100% 100%);
 	color: #fff;
+	@include respond-to(step1){
+		background: url('../img/back-s1.png') no-repeat;
+		@include background-size(100% 100%);
+	}
 }
 .header__in{
 	padding: 20px;
+	margin: 0 auto;
 	@extend %site;
+	@include respond-to(step1){
+		padding: 10px 0 1px;
+		margin: 0 auto;
+	}
 }
 .header__title{
 	text-transform: uppercase;
@@ -52,6 +82,9 @@
 	@include ar;
 	line-height: 1;
 	margin-bottom: .5em;
+	@include respond-to(step1){
+		font-size: 33px;
+	}
 }
 .header__subtitle{
 	text-align: center;
@@ -59,6 +92,9 @@
 	@include hl;
 	line-height: 1;
 	margin-bottom: .6em;
+	@include respond-to(step1){
+		font-size: 32px;
+	}
 }
 .header__cols{
 	@extend %clr;
@@ -72,9 +108,19 @@
 	width: 30%;
 	padding-top: 50px;
 	margin-right: 125px;
+	@include respond-to(step1){
+		margin-right: 75px;
+		padding-top: 22px;
+	}
 }
 .header__image{
 	padding-top: 30px;
+	@include respond-to(step1){
+		padding-top: 12px;
+	}
+	img{
+		max-width: 100%;
+	}
 }
 .header__text{
 	text-align: center;
@@ -82,6 +128,10 @@
 	font-size: 98px;
 	@include hul;
 	line-height: 1;
+	@include respond-to(step1){
+		font-size: 50px;
+		margin-bottom: 0.3em;
+	}
 }
 .header__button{
 }
@@ -90,15 +140,24 @@
 .header__timer{
 	text-align: center;
 	margin-bottom: 20px;
+	@include respond-to(step1){
+		margin-bottom: 0;
+	}
 	img{
 		display: inline-block;
+		max-width: 100%;
 	}
 }
 //info
 .info{
-	@include background-image(linear-gradient(#c0dae5, #c3dbe8));
+	background: rgba(255,255,255,.45);
 	padding: 20px 0;
 	font-size: 36px;
+	color: #3a3f3e;
+	@include respond-to(step1){
+		font-size: 18px;
+		padding: 19px 0;
+	}
 }
 .info__row{
 	border-bottom: 1px solid #3a3f3e;
@@ -111,26 +170,41 @@
 .info__description{
 	margin-bottom: 15px;
 	padding: 0 16%;
+	@include respond-to(step1){
+		padding: 0 15%;
+		line-height: 1.2;
+		margin-bottom: 16px;
+	}
 }
 .info__text{
 	margin-top: 20px;
 	font-size: 36px;
 	@include hl;
+	@include respond-to(step1){
+		margin-top: 18px;
+		font-size: 18px;
+	}
 }
 //winners
 .winners{
 	background-color: #f6f5f1;
 	padding: 20px 0;
+	@include respond-to(step1){
+		padding: 12px 0 30px;
+	}
 }
 .winners__in{
 	@extend %site;
-	padding: 0 20px;
 }
 .winners__title{
 	text-align: center;
 	margin-bottom: .7em;
 	font-size: 60px;
 	@include hl;
+	@include respond-to(step1){
+		font-size: 30px;
+		margin-bottom: 1.2em;
+	}
 }
 .winners__cols{
 	@extend %clr;
@@ -138,20 +212,38 @@
 .winners__left{
 	float: left;
 	width: 47%;
+	margin-left: 20px;
+	@include respond-to(step1){
+		margin-left: 7px;
+	}
 }
 .winners__right{
 	float: right;
 	width: 47%;
+	margin-left: 20px;
+	@include respond-to(step1){
+		margin-left: 15px;
+		float: left;
+	}
 }
 .winners__item{
 	@extend %clr;
 	margin-bottom: 30px;
+	@include respond-to(step1){
+		margin-bottom: 23px;
+	}
 }
 .winners__pic{
 	float: left;
 	margin-right: 30px;
+	width: 27%;
+	@include respond-to(step1){
+		width: 97px;
+		margin-right: 13px;
+	}
 	img{
 		display: block;
+		max-width: 100%;
 	}
 }
 .winners__info{
@@ -161,10 +253,17 @@
 	font-size: 48px;
 	line-height: 1;
 	@include hl;
-	margin-bottom: .4em;;
+	margin-bottom: .4em;
+	@include respond-to(step1){
+		font-size: 23px;
+	}
 }
 .winners__text{
 	font-size: 30px;
+	@include respond-to(step1){
+		font-size: 14px;
+		line-height: 1.3;
+	}
 }
 //get-started
 .get-started{
@@ -173,12 +272,19 @@
 .get-started__in{
 	@extend %site;
 	padding: 28px 20px;
+	@include respond-to(step1){
+		padding: 13px 0;
+	}
 }
 .get-started__left{
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 30px;
 	margin-right: 120px;
+		@include respond-to(step1){
+			font-size: 17px;
+			margin-right: 35px;
+		}
 }
 .get-started__go{
 	display: inline-block;
@@ -188,6 +294,15 @@
 		display: inline-block;
 		vertical-align: middle;
 		margin-top: -11px;
-		@include s(arrow2x); 
+		background-image: url('../img/arrow2x.png');
+		width: 86px;
+		height: 47px;
+		@include background-size(100% 100%);
+		@include respond-to(step1){
+			width: 43px;
+			height: 24px;
+			margin-top: -4px;
+			margin-left: 10px;
+		}
 	}
 }

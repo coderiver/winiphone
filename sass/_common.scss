@@ -47,6 +47,10 @@ body{
 	@include hr;
 	line-height:1.4;
 	color: #3a3f3e;
+	min-width: 1536px;
+	@include respond-to(step1){
+		min-width: 100%;
+	}
 }
 // resets
 a img,fieldset{
