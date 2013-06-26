@@ -1,0 +1,71 @@
+//archive
+@font-face {
+	font-family: 'archiveregular';
+	src: 	url('../fonts/archive.eot');
+	src: 	url('../fonts/archive.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/archive.woff') format('woff'),
+			url('../fonts/archive.ttf') format('truetype'),
+			url('../fonts/archive.svg#archiveregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+	@mixin ar(){
+		font-family: 'archiveregular', arial, sans-serif;
+		font-weight: normal;
+		font-style: normal;
+	}
+
+//helvetica neue cyr light
+@font-face {
+	font-family: 'helveticaneuecyrlight';
+	src: 	url('../fonts/helveticaneuecyr-light.eot');
+	src: 	url('../fonts/helveticaneuecyr-light.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/helveticaneuecyr-light.woff') format('woff'),
+			url('../fonts/helveticaneuecyr-light.ttf') format('truetype'),
+			url('../fonts/helveticaneuecyr-light.svg#helveticaneuecyrlight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+	@mixin hl(){
+		font-family: 'helveticaneuecyrlight', arial, sans-serif;
+		font-weight: normal;
+		font-style: normal;
+	}
+
+//helvetica neue cyr ultra light
+@font-face {
+	font-family: 'helveticaneuecyrultralight';
+	src: 	url('../fonts/helveticaneuecyr-ultralight.eot');
+	src: 	url('../fonts/helveticaneuecyr-ultralight.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/helveticaneuecyr-ultralight.woff') format('woff'),
+			url('../fonts/helveticaneuecyr-ultralight.ttf') format('truetype'),
+			url('../fonts/helveticaneuecyr-ultralight.svg#helveticaneuecyrultralight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+	@mixin hul(){
+		font-family: 'helveticaneuecyrultralight', arial, sans-serif;
+		font-weight: normal;
+		font-style: normal;
+	}
+
+//helvetica neue cyr roman
+@font-face {
+	font-family: 'helveticaneuecyrroman';
+	src: 	url('../fonts/helveticaneuecyr-roman.eot');
+	src: 	url('../fonts/helveticaneuecyr-roman.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/helveticaneuecyr-roman.woff') format('woff'),
+			url('../fonts/helveticaneuecyr-roman.ttf') format('truetype'),
+			url('../fonts/helveticaneuecyr-roman.svg#helveticaneuecyrroman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+	@mixin hr(){
+		font-family: 'helveticaneuecyrroman', arial, sans-serif;
+		font-weight: normal;
+		font-style: normal;
+	}
