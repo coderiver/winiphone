@@ -6,6 +6,23 @@
 		width: auto;
 	}
 }
+.debug{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	z-index: 1000;
+	@include respond-to(mob){
+		background: red;
+	}
+	@include respond-to(ipads){
+		background: purple;
+	}
+	@include respond-to(wide){
+		background: green;
+	}
+}
 // *{
 // 	border: 1px solid red;
 // }
@@ -65,13 +82,12 @@
 	background: url('../img/back-big.png');
 	@include background-size(100% 100%);
 	color: #fff;
-	@include respond-to(step1){
-		background: url('../img/back-s1.png') no-repeat;
-		@include background-size(100% 100%);
+	@include respond-to(wide){
+		width: 50%;
+		float: left;
 	}
 }
 .header__in{
-	padding: 10px;
 	margin: 0 auto;
 	@extend %site;
 	@include respond-to(step1){
@@ -106,17 +122,41 @@
 .header__left{
 	float: left;
 	width: 50%;
+	@include respond-to(wide){
+		float: none;
+		width: auto;
+	}
 }
 .header__right{
 	float: right;
 	width: 30%;
 	margin-right: 75px;
-	padding-top: 22px;
+	
+	position: relative;
+	@include respond-to(wide){
+		width: auto;
+		float: none;
+		clear:both;
+		background: rgba(#fff , .45);
+		margin: 0;
+		padding: 12px 0 0 0;
+
+	}
+	@extend %clr;
+	&:after{
+		@include respond-to(wide){
+			content: ' ';
+			height: 1px;
+			clear: both;
+			display: block;
+		}
+	}
 }
 .header__image{
 	padding-top: 30px;
-	@include respond-to(step1){
+	@include respond-to(wide){
 		padding-top: 12px;
+		margin: 0 50px;
 	}
 	img{
 		max-width: 100%;
@@ -128,66 +168,80 @@
 	font-size: 50px;
 	@include hul;
 	line-height: 1;
-	@include respond-to(step1){
-		font-size: 50px;
-		margin-bottom: 0.3em;
+	@include respond-to(wide){
+		position: absolute;
+		right: 20px;
+		top: -100px;
 	}
 }
 .header__button{
-}
-.header__info{
+	@include respond-to(wide){
+		float: right;
+		width: 40%;
+		margin-top: 17px;
+		margin-right: 5%;
+	}
 }
 .header__timer{
 	text-align: center;
 	margin-bottom: 10px;
-	@include respond-to(step1){
-		margin-bottom: 0;
+	@include respond-to(wide){
+		float: left;
+		width: 40%;
+		margin-left: 5%;
 	}
 	img{
 		display: inline-block;
 		max-width: 100%;
 	}
+
 }
 //info
 .info{
-	background: rgba(255,255,255,.45);
-	padding: 10px 0;
+	background: rgba(#fff,.45);
 	font-size: 18px;
 	color: #3a3f3e;
-	@include respond-to(step1){
-		font-size: 18px;
-		padding: 19px 0;
+	.superbutton{
+		display: none;
+		@include respond-to(mob){
+			display: inline-block;
+		}
 	}
 }
-.info__row{
-	border-bottom: 1px solid #3a3f3e;
-}
+
 .info__in{
-	@extend %site;
 	text-align: center;
-	padding: 0 10px;
+	padding: 10px;
+	border-top: 1px solid #3A3F3E;
 }
 .info__description{
-	margin-bottom: 15px;
-	padding: 0 16%;
-	@include respond-to(step1){
-		padding: 0 15%;
+	padding: 10px;
+	text-align: center;
+	padding: 15px 10px;
+
+	@include respond-to(mob){
 		line-height: 1.2;
-		margin-bottom: 16px;
+		text-align: left;
+		font-size: 15px;
+		padding: 10px;
 	}
 }
 .info__text{
-	margin-top: 20px;
-	font-size: 36px;
+	font-size: 18px;
+	
 	@include hl;
-	@include respond-to(step1){
-		margin-top: 18px;
-		font-size: 18px;
+	@include respond-to(mob){
+		font-size: 12px;
+		margin-bottom: 8px;
 	}
 }
 //winners
 .winners{
 	background-color: #f6f5f1;
+	@include respond-to(wide){
+		width: 50%;
+		float: right;
+	}
 }
 .winners__in{
 	padding: 20px 15px;
@@ -199,16 +253,19 @@
 	@include hl;
 }
 .winners__cols{
-	@extend %clr;
+	@extend %clr; 
 }
 
 .winners__item{
 	margin-bottom: 30px;
-	display: inline-block;
-	@include respond-to(wide){
+	vertical-align: top;
+	@include respond-to(ipads){
 		width: 45%;
 		display: inline-block;
 		margin-right: 4%;
+	}
+	@include respond-to(wide){
+		width: auto;
 	}
 }
 .winners__pic{
@@ -248,6 +305,7 @@
 //get-started
 .get-started{
 	background-color: #434343;
+	clear: both;
 }
 .get-started__in{
 	@extend %site;
@@ -269,6 +327,9 @@
 .get-started__go{
 	display: inline-block;
 	vertical-align: middle;
+	@include respond-to(wide){
+		margin-left: 50px;
+	}
 	i{
 		margin-left: 40px;
 		display: inline-block;
