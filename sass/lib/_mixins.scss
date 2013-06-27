@@ -20,7 +20,7 @@ $step1: 768px;
 		@media only screen and (max-width: $step1) { @content; }
 	}
 	@else if $media == ipads {
-		@media only screen and (min-width: $step1) and (max-width: $step3) { @content; }
+		@media only screen and (min-width: 769px) and (max-width: $step3) { @content; }
 	}
 	@else if $media == wide {
 		@media only screen and (min-width: $step3) { @content; }

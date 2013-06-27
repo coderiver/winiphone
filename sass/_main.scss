@@ -124,11 +124,11 @@ body{
 	@include respond-to(mob){
 		font-size: 21px;
 		float: left;
-		width: 40%;
+		width: 50%;
 		margin-left: 10px;
 		line-height: 1.4;
 		text-align: left;
-		margin-bottom: 30px;
+		margin-bottom: 14px;
 	}
 }
 .header__cols{
@@ -143,7 +143,7 @@ body{
 	}
 	@include respond-to(mob){
 		float: right;
-		width: 40%;
+		width: 38%;
 		margin-right: 10px;
 	}
 }
@@ -151,7 +151,6 @@ body{
 	float: right;
 	width: 30%;
 	margin-right: 75px;
-	
 	position: relative;
 	@include respond-to(wide){
 		width: auto;
@@ -165,7 +164,7 @@ body{
 	@extend %clr;
 	@include respond-to(mob){
 		float: none;
-		width: 40%;
+		width: 55%;
 		margin-left: 10px;
 	}
 	&:after{
@@ -214,15 +213,20 @@ body{
 	}
 	@include respond-to(mob){
 		display: none;
+		
 	}
 }
 .header__timer{
+	@extend %clr;
 	text-align: center;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 	@include respond-to(wide){
 		float: left;
 		width: 40%;
-		margin-left: 5%;
+		margin-left: 4%;
+	}
+	@include respond-to(mob){
+		clear: left;
 	}
 	img{
 		display: inline-block;
@@ -262,7 +266,6 @@ body{
 }
 .info__text{
 	font-size: 18px;
-	
 	@include hl;
 	@include respond-to(mob){
 		font-size: 12px;
@@ -278,7 +281,7 @@ body{
 	}
 }
 .winners__in{
-	padding: 20px 15px;
+	padding: 10px 15px 20px;
 }
 .winners__title{
 	text-align: center;
@@ -332,7 +335,6 @@ body{
 	@include respond-to(mob){
 		font-size: 18px;
 	}
-	
 }
 .winners__text{
 	font-size: 14px;
@@ -347,7 +349,7 @@ body{
 }
 .get-started__in{
 	@extend %site;
-	padding: 13px 0;
+	padding: 19px 0;
 	text-align: center;
 }
 .get-started__left{
@@ -399,8 +401,9 @@ body{
 		margin-bottom: 6px;
 	}
 	.mb__clock{
-		width: 150px;
+		width: 163px;
 		display: inline-block;
-		margin: 14px 0 5px 0;
+		padding: 14px 0 30px 0;
+		margin: 0 auto;
 	}
 }
