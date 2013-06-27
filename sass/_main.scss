@@ -48,13 +48,17 @@
 	}
 }
 .btn_mod{
-	@include respond-to(step1){
-		width: 70%;
-		display: block;
-		margin: 0 auto;
-		padding: 8px 0;
-		font-size: 12px;
+	@include respond-to(mob){
+		padding-left: 43px;
+		padding-right: 43px;
+		font-size: 18px;
+		height: 38px;
+		line-height: 37px;
+		padding-top: 0;
+		padding-bottom: 0;
 	}
+	width: auto;
+	padding: 8px 30px;
 }
 //header
 .header{
@@ -184,81 +188,61 @@
 //winners
 .winners{
 	background-color: #f6f5f1;
-	padding: 20px 0;
-	@include respond-to(step1){
-		padding: 12px 0 30px;
-	}
 }
 .winners__in{
-	@extend %site;
+	padding: 20px 15px;
 }
 .winners__title{
 	text-align: center;
 	margin-bottom: .7em;
-	font-size: 30px;
+	font-size: 28px;
 	@include hl;
-	@include respond-to(step1){
-		font-size: 30px;
-		margin-bottom: 1.2em;
-	}
 }
 .winners__cols{
 	@extend %clr;
 }
-.winners__left{
-	float: left;
-	width: 47%;
-	margin-left: 20px;
-	@include respond-to(step1){
-		margin-left: 7px;
-	}
-}
-.winners__right{
-	float: right;
-	width: 47%;
-	margin-left: 20px;
-	@include respond-to(step1){
-		margin-left: 15px;
-		float: left;
-	}
-}
+
 .winners__item{
-	@extend %clr;
 	margin-bottom: 30px;
-	@include respond-to(step1){
-		margin-bottom: 23px;
+	display: inline-block;
+	@include respond-to(wide){
+		width: 45%;
+		display: inline-block;
+		margin-right: 4%;
 	}
 }
 .winners__pic{
 	float: left;
 	margin-right: 30px;
-	width: 27%;
-	@include respond-to(step1){
-		width: 97px;
-		margin-right: 13px;
-	}
+	width: 97px;
+	height: 74px;
 	img{
 		display: block;
 		max-width: 100%;
 	}
+	@include respond-to(mob){
+		margin-right: 11px;
+	}
 }
 .winners__info{
 	overflow: hidden;
+	padding-right: 20px;
 }
 .winners__name{
 	font-size: 24px;
 	line-height: 1;
+	padding-right: 20px;
 	@include hl;
 	margin-bottom: .4em;
-	@include respond-to(step1){
-		font-size: 23px;
+	@include respond-to(mob){
+		font-size: 18px;
 	}
+	
 }
 .winners__text{
 	font-size: 14px;
-	@include respond-to(step1){
-		font-size: 14px;
-		line-height: 1.3;
+	@include respond-to(mob){
+		font-size: 12px;
 	}
 }
 //get-started
@@ -267,8 +251,8 @@
 }
 .get-started__in{
 	@extend %site;
-	padding: 28px 20px;
 	padding: 13px 0;
+	text-align: center;
 	@include respond-to(step1){
 		padding: 13px 0;
 	}
@@ -278,9 +262,8 @@
 	vertical-align: middle;
 	font-size: 17px;
 	margin-right: 35px;
-		@include respond-to(step1){
-			font-size: 17px;
-			margin-right: 35px;
+		@include respond-to(mob){
+			display: none;
 		}
 }
 .get-started__go{
@@ -294,12 +277,34 @@
 		background-image: url('../img/arrow2x.png');
 		width: 86px;
 		height: 47px;
+		width: 43px;
+		height: 24px;
+		margin-top: -4px;
+		margin-left: 10px;
 		@include background-size(100% 100%);
-		@include respond-to(step1){
-			width: 43px;
-			height: 24px;
-			margin-top: -4px;
-			margin-left: 10px;
+		@include respond-to(mob){
+			display: none;
 		}
+	}
+}
+
+.mb{
+	display: none;
+	text-align: center;
+	color: #fff;
+	line-height: 1.4;
+	@include respond-to(mob){
+		display: block;
+	}
+	font-size: 14px;
+	h3{
+		font-size: 18px;
+		font-weight: normal;
+		margin-bottom: 6px;
+	}
+	.mb__clock{
+		width: 150px;
+		display: inline-block;
+		margin: 14px 0 5px 0;
 	}
 }

@@ -11,19 +11,20 @@
 // }
 
 // responsive example, edit or remove
+$step0: 300px;
 $step1: 768px;
 // $step2: 1200px;
-// $step3: 570px;
+ $step3: 1020px;
 @mixin respond-to($media) {
-	@if $media == step1 {
+	@if $media == mob {
 		@media only screen and (max-width: $step1) { @content; }
 	}
-	// @else if $media == step2 {
-	// 	@media only screen and (max-width: $step2) { @content; }
-	// }
-	// @else if $media == step3 {
-	// 	@media only screen and (max-width: $step3) { @content; }
-	// }
+	@else if $media == ipads {
+		@media only screen and (min-width: $step1) and (max-width: $step3) { @content; }
+	}
+	@else if $media == wide {
+		@media only screen and (min-width: $step3) { @content; }
+	}
 }
 // retina bg
 @mixin retina{
