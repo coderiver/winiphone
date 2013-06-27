@@ -2,26 +2,43 @@
 %site{
 	//width: 1536px;
 	margin: 0 auto;
-	@include respond-to(step1){
-		width: auto;
+}
+body{
+	@include respond-to(wide){
+		background: #F6F5F1;
+	}
+}
+.forweb{
+	display: none;
+	@include respond-to(wide){
+		display: block;
+	}
+	@include respond-to(ipads){
+		display: block;
+	}
+}
+.formob{
+	display: none;
+	@include respond-to(mob){
+		display: block;
 	}
 }
 .debug{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	z-index: 1000;
-	@include respond-to(mob){
-		background: red;
-	}
-	@include respond-to(ipads){
-		background: purple;
-	}
-	@include respond-to(wide){
-		background: green;
-	}
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	width: 20px;
+// 	height: 20px;
+// 	z-index: 1000;
+// 	@include respond-to(mob){
+// 		background: red;
+// 	}
+// 	@include respond-to(ipads){
+// 		background: purple;
+// 	}
+// 	@include respond-to(wide){
+// 		background: green;
+// 	}
 }
 // *{
 // 	border: 1px solid red;
@@ -41,11 +58,6 @@
 	padding: 10px 0;
 	width: 100%;
 	@include box-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
-	@include respond-to(step1){
-		padding: 10px 0;
-		font-size: 24px;
-		@include border-radius(10px);
-	}
 	&:hover,
 	&:focus{
 		background-image: none;
@@ -90,20 +102,17 @@
 .header__in{
 	margin: 0 auto;
 	@extend %site;
-	@include respond-to(step1){
-		padding: 10px 0 1px;
-		margin: 0 auto;
-	}
 }
 .header__title{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 33px;
+	padding-top: 10px;
 	@include ar;
 	line-height: 1;
 	margin-bottom: .5em;
-	@include respond-to(step1){
-		font-size: 33px;
+	@include respond-to(mob){
+		font-size: 25px;
 	}
 }
 .header__subtitle{
@@ -112,8 +121,14 @@
 	@include hl;
 	line-height: 1;
 	margin-bottom: .6em;
-	@include respond-to(step1){
-		font-size: 32px;
+	@include respond-to(mob){
+		font-size: 21px;
+		float: left;
+		width: 40%;
+		margin-left: 10px;
+		line-height: 1.4;
+		text-align: left;
+		margin-bottom: 30px;
 	}
 }
 .header__cols{
@@ -125,6 +140,11 @@
 	@include respond-to(wide){
 		float: none;
 		width: auto;
+	}
+	@include respond-to(mob){
+		float: right;
+		width: 40%;
+		margin-right: 10px;
 	}
 }
 .header__right{
@@ -143,6 +163,11 @@
 
 	}
 	@extend %clr;
+	@include respond-to(mob){
+		float: none;
+		width: 40%;
+		margin-left: 10px;
+	}
 	&:after{
 		@include respond-to(wide){
 			content: ' ';
@@ -158,6 +183,9 @@
 		padding-top: 12px;
 		margin: 0 50px;
 	}
+	@include respond-to(mob){
+		padding-top: 0;
+	}
 	img{
 		max-width: 100%;
 	}
@@ -170,8 +198,11 @@
 	line-height: 1;
 	@include respond-to(wide){
 		position: absolute;
-		right: 20px;
-		top: -100px;
+		right: 50px;
+		top: -60px;
+	}
+	@include respond-to(mob){
+		display: none;
 	}
 }
 .header__button{
@@ -180,6 +211,9 @@
 		width: 40%;
 		margin-top: 17px;
 		margin-right: 5%;
+	}
+	@include respond-to(mob){
+		display: none;
 	}
 }
 .header__timer{
@@ -251,6 +285,9 @@
 	margin-bottom: .7em;
 	font-size: 28px;
 	@include hl;
+	@include respond-to(wide){
+		margin-bottom: 60px;
+	}
 }
 .winners__cols{
 	@extend %clr; 
@@ -266,6 +303,7 @@
 	}
 	@include respond-to(wide){
 		width: auto;
+		margin-bottom: 35px;
 	}
 }
 .winners__pic{
@@ -311,9 +349,6 @@
 	@extend %site;
 	padding: 13px 0;
 	text-align: center;
-	@include respond-to(step1){
-		padding: 13px 0;
-	}
 }
 .get-started__left{
 	display: inline-block;
