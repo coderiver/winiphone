@@ -216,11 +216,7 @@
     // width: 10px;
     // height: 100px;
             height: 60px;
-        width: 4px;
-    @include respond-to(mob){
-        height: 60px;
-        width: 4px;
-    }
+        width: 6px;
 }
 
 .flip-clock-divider:first-child { display: none; }
