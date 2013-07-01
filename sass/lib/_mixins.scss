@@ -12,8 +12,20 @@
 // responsive example, edit or remove
 $step0: 300px;
 $step1: 767px;
-// $step2: 1200px;
- $step3: 1020px;
+$step3: 1020px;
+
+// @mixin respond-to($media) {
+// 	@if $media == mob {
+// 		@media only screen and (max-width: $step1) { @content; }
+// 	}
+// 	@else if $media == ipads {
+// 		@media only screen and (min-width: 768px) and (max-width: $step3) { @content; }
+// 	}
+// 	@else if $media == wide {
+// 		@media only screen and (min-width: $step3) { @content; }
+// 	}
+// }
+
 @mixin respond-to($media) {
 	@if $media == mob {
 		@media only screen and (max-width: $step1) { @content; }
@@ -23,8 +35,12 @@ $step1: 767px;
 	}
 	@else if $media == wide {
 		@media only screen and (min-width: $step3) { @content; }
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+		and  (orientation:landscape)  { @content; }
 	}
 }
+
+
 // retina bg
 @mixin retina{
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
