@@ -8,21 +8,21 @@ body{
 		background: #F6F5F1;
 	}
 }
-.forweb{
-	display: none;
-	@include respond-to(wide){
-		display: block;
-	}
-	@include respond-to(ipads){
-		display: block;
-	}
-}
-.formob{
-	display: none;
-	@include respond-to(mob){
-		display: block;
-	}
-}
+// .forweb{
+// 	display: none;
+// 	@include respond-to(wide){
+// 		display: block;
+// 	}
+// 	@include respond-to(ipads){
+// 		display: block;
+// 	}
+// }
+// .formob{
+// 	display: none;
+// 	@include respond-to(mob){
+// 		display: block;
+// 	}
+// }
 .debug{
 // 	position: fixed;
 // 	top: 0;

@@ -10,6 +10,8 @@
 	<script src="js/flipclock/libs/prefixfree.min.js"></script>
 	<script src="js/flipclock/flipclock.min.js"></script>
 	<script src="js/jquery.jcountdown.js"></script>
+	<script src="js/external/matchmedia.js"></script>
+	<script src="js/picturefill.js"></script>
 	<!-- <script src="js/jquery.jcountdown-short.js"></script> -->
 	<script src="js/common.js"></script>
 </head>
@@ -25,8 +27,16 @@
 			<!-- BEGIN .header__left -->
 			<div class="header__left">
 				<div class="header__image">
-					<img class="forweb" src="img/iphone@2x.png" alt="iphone">
-					<img class="formob" src="img/iphone@2x1.png" alt="iphone">
+<!-- 					<img class="forweb" src="img/iphone@2x.png" alt="iphone">
+					<img class="formob" src="img/iphone@2x1.png" alt="iphone"> -->
+					<span data-picture data-alt="A giant stone face at The Bayon temple in Angkor Thom, Cambodia">
+					    <span data-src="img/small/iphone.png"></span>
+					    <span data-src="img/small/iphone_2x.png"      data-media="(min-width: 300px) and (min-device-pixel-ratio: 2.0)"></span>
+					    <span data-src="img/medium/iphone.png"        data-media="(min-width: 767px)"></span>
+					    <span data-src="img/medium/iphone_2x.png"     data-media="(min-width: 767px) and (min-device-pixel-ratio: 2.0)"></span>
+					    <span data-src="img/large/iphone_2x.png"         data-media="(min-width: 1020px)"></span>
+					    <span data-src="img/large/iphone_2x.png"      data-media="(min-width: 1020px) and (min-device-pixel-ratio: 2.0)"></span>
+					</span>
 				</div>
 			</div>
 			<!-- /.header__left -->
