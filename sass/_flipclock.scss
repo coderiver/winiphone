@@ -95,7 +95,7 @@
     // font-size: 80px;
     // line-height: 87px;
     // margin: 5px;
-        width: 35px;
+        width: 32px;
         height: 55px;
         font-size: 10px;
         line-height: 55px;
@@ -183,9 +183,9 @@
     background-color: #f7f7f7;
     border-radius: 6px;
     // font-size: 70px;
-    font-size: 57px;
+    font-size: 50px;
     @include respond-to(mob){
-        font-size: 57px;
+        font-size: 50px;
     }
 }
 
@@ -253,9 +253,9 @@
     }
 }
 .flip-clock-divider.seconds .flip-clock-label { 
-    right: -75px; 
+    right: -69px; 
     @include respond-to(mob){
-       right: -65px;
+       right: -59px;
     }
 }
 

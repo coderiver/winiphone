@@ -197,8 +197,9 @@ body{
 	line-height: 1;
 	@include respond-to(wide){
 		position: absolute;
-		right: 50px;
+		right: 30px;
 		top: -60px;
+		font-size: 45px;
 	}
 	@include respond-to(mob){
 		display: none;
@@ -289,7 +290,7 @@ body{
 	font-size: 28px;
 	@include hl;
 	@include respond-to(wide){
-		margin-bottom: 60px;
+		margin-bottom: 20px;
 	}
 }
 .winners__cols{
@@ -303,10 +304,14 @@ body{
 		width: 45%;
 		display: inline-block;
 		margin-right: 4%;
+		margin-bottom: 25px;
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}
 	@include respond-to(wide){
 		width: auto;
-		margin-bottom: 35px;
+		margin-bottom: 20px;
 	}
 }
 .winners__pic{
@@ -332,6 +337,9 @@ body{
 	padding-right: 20px;
 	@include hl;
 	margin-bottom: .4em;
+	@include respond-to(wide){
+		font-size: 19px;
+	}
 	@include respond-to(mob){
 		font-size: 18px;
 	}
@@ -339,6 +347,9 @@ body{
 .winners__text{
 	font-size: 14px;
 	@include respond-to(mob){
+		font-size: 12px;
+	}
+	@include respond-to(wide){
 		font-size: 12px;
 	}
 }
